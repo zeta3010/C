@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+//gibt die Länge des Char Arrays zurück
 int laenge (char *ptr){
 
 	int l = 0;
@@ -14,7 +15,7 @@ int laenge (char *ptr){
 
 }
 
-
+//checkt ob es ein Palindrom ist, ja = true, nein = false
 bool checkPalin(char *ptr, int l){
 	
 	bool h;
@@ -24,25 +25,20 @@ bool checkPalin(char *ptr, int l){
 		
 		if(ptr[i]!=ptr[l-1-i]){
 			h = false;
-		
 		}
 
 		else{
 			h = true;
 		}
 		i++;
-	
 	}	
-
 	return h;
-
 }
 
-
+//Start des Programmes
 int main(){
 
 	char wort[100];
-	char *ptr = wort;
 
 	printf("Gebe eine Wort ein\n");
 	fgets(wort,100,stdin);
